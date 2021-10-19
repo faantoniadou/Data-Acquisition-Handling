@@ -27,25 +27,34 @@ while count < 4:
     pcf.portWrite(5)
 time.sleep(0.5)
 
-#pcf.portWrite(0)  #1111
-#pcf.portWrite(1)  #0111
-#pcf.portWrite(2)  #1011
-#pcf.portWrite(3)  #0011
-#pcf.portWrite(4)  #1101
-#pcf.portWrite(5)  #0101
-#pcf.portWrite(6)  #1001
-#pcf.portWrite(7)  #0001
-#pcf.portWrite(8)  #1110
-#pcf.portWrite(9)  #0110
-#pcf.portWrite(10) #1010
-#pcf.portWrite(11) #0010
-#pcf.portWrite(12) #1100
-
 
 pcf.digitalWrite(LED0, True)
 pcf.digitalWrite(LED1, True)
 pcf.digitalWrite(LED2, True)
 pcf.digitalWrite(LED3, True)
+
+# To explain how portWrite works we define 1 as the state where the LED is off and 0 when the LED is on.
+# Looking at the LEDs from the bottom up we note the outcome of each of the following:
+
+# pcf.portWrite(0)  #0000
+# pcf.portWrite(1)  #0001
+# pcf.portWrite(2)  #0010
+# pcf.portWrite(3)  #0011
+# pcf.portWrite(4)  #0100
+# pcf.portWrite(5)  #0101
+# pcf.portWrite(6)  #0110
+# pcf.portWrite(7)  #0111
+# pcf.portWrite(8)  #1000
+# pcf.portWrite(9)  #1001
+# pcf.portWrite(10) #1010
+# pcf.portWrite(11) #1011
+# pcf.portWrite(12) #1100
+
+# each outcome corresponds to the binary representation of the digit given as the input of the portWrite method.
+# so the output of the method is the binary representation of the input as shown by the LEDs.
+
+
+
 
 
 
