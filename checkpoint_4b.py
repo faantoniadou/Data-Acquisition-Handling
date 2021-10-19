@@ -25,7 +25,6 @@ while count < 4:
     pcf.portWrite(10)
     time.sleep(0.5)
     pcf.portWrite(5)
-time.sleep(0.5)
 
 
 pcf.digitalWrite(LED0, True)
