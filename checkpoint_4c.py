@@ -14,7 +14,16 @@ pcf.digitalWrite(LED0, True)
 
 # Loop for ever
 while True:
-# Read the switch - if it is pressed change the LED outputs
+    # Christmas Lights pattern
+    time.sleep(0.5)
+    pcf.portWrite(10)
+    time.sleep(0.5)
+    pcf.portWrite(5)
+    
+    # Read the switch - if it is pressed change the LED outputs
     if ( pcf.digitalRead(SWITCH0)==False ):
-    # Insert your code here
-        pcf.digitalWrite(LED0, False)
+        # 2 consecutive lights turning on pattern
+        time.sleep(0.5)
+        pcf.portWrite(3)
+        time.sleep(0.5)
+        pcf.portWrite(12)
