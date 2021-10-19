@@ -29,8 +29,7 @@ time.sleep(0.5)
 
 #pcf.portWrite(0)  #1111
 #pcf.portWrite(1)  #0111
-#pcf.portWrite(2)
-# time.sleep(0.5)  #1011
+#pcf.portWrite(2)  #1011
 #pcf.portWrite(3)  #0011
 #pcf.portWrite(4)  #1101
 #pcf.portWrite(5)  #0101
