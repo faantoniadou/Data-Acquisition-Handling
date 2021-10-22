@@ -27,21 +27,17 @@ def updatePlot( i ):
     
     if i < 19:
         timeValues.append( datetime.datetime.now() ) # Store time
-        measurements1.append( tmp0.getCelsius() ) # Store temperature
-        measurements2.append( tmp1.getCelsius() ) # Store temperature
+        measurements1.append( tmp0.getCelsius() ) # Store temperature for sensor 1
+        measurements2.append( tmp1.getCelsius() ) # Store temperature for sensor 2
         
         plotFigure.clear() # Clear the old plot
-        pylab.plot( timeValues, measurements1, label='sensor 1' ) # Make the new plot
+        # Make the new plot
+        pylab.plot( timeValues, measurements1, label='sensor 1' ) 
         pylab.plot( timeValues, measurements2, label='sensor 2' )
         pylab.xlabel("Time")
         pylab.ylabel("Temperature")
         pylab.title("Temperature of sensors against time")
         pylab.legend()
-        #t_finish = time.time()
-        #t_int = t_finish - t_start
-        #count +=1
-        print(i)
-        #i += 1
 
     
 # Make the animated plot
@@ -61,6 +57,8 @@ print('Sensor 2 standard deviation: ' + str(np.std(sensor2_vals)))
 print(sensor1_vals)
 print(sensor2_vals)
 #0.062
+
+#range was obtained by looking at the arrays returned. for more accurate range the commented out part could be used
 
 plt.hist(sensor1_vals, bins=5, range=[23.75,24.])#range=[np.min(np.min(sensor1_vals),np.min(sensor2_vals)),np.max(np.max(sensor1_vals),np.max(sensor2_vals))])
 plt.hist(sensor2_vals, bins=5, range=[23.75,24.])#range=[np.min(np.min(sensor1_vals),np.min(sensor2_vals)),np.max(np.max(sensor1_vals),np.max(sensor2_vals))])
