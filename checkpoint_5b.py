@@ -28,11 +28,6 @@ def updatePlot( i ):
         pylab.xlabel("Time")
         pylab.ylabel("Temperature")
         pylab.title("Temperature of sensor against time")
-        #t_finish = time.time()
-        #t_int = t_finish - t_start
-        #count +=1
-        print(i)
-        #i += 1
     
 # Make the animated plot
 ani = animation.FuncAnimation( plotFigure, updatePlot, interval=1000 )
